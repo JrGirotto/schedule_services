@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:schedule_service_core/schedule_service_core.dart';
 
 class ScheduleServiceAppBar extends AppBar {
   ScheduleServiceAppBar({super.key, List<Widget>? actions})
       : super(
-            toolbarHeight: 72,
-            backgroundColor: Colors.transparent,
+            toolbarHeight: 70,
+            // backgroundColor: Colors.transparent,
             flexibleSpace: Container(
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(color: Colors.white, boxShadow: [
@@ -14,9 +15,16 @@ class ScheduleServiceAppBar extends AppBar {
                   blurRadius: 4,
                 ),
               ]),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 64.0),
-                child: Image.asset('assets/images/logo_horizontal.png'),
+              child: const Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Banho',
+                  style: TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: ScheduleServiceTheme.blueColor,
+                  ),
+                ),
               ),
             ),
             actions: actions);

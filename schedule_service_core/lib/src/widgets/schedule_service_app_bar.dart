@@ -4,8 +4,8 @@ import 'package:schedule_service_core/schedule_service_core.dart';
 class ScheduleServiceAppBar extends AppBar {
   ScheduleServiceAppBar({super.key, List<Widget>? actions})
       : super(
-            toolbarHeight: 70,
-            // backgroundColor: Colors.transparent,
+            //toolbarHeight: 70,
+            backgroundColor: Colors.transparent,
             flexibleSpace: Container(
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(color: Colors.white, boxShadow: [

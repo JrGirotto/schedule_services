@@ -19,14 +19,13 @@ class _PetshopsPageState extends State<PetshopsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            'Banho',
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
-              color: ScheduleServiceTheme.blueColor,
-            ),
+        centerTitle: true,
+        title: const Text(
+          'Banho',
+          style: TextStyle(
+            fontSize: 26,
+            fontWeight: FontWeight.bold,
+            color: ScheduleServiceTheme.blueColor,
           ),
         ),
         actions: [

@@ -26,10 +26,12 @@ class ListServicesPetshops extends StatelessWidget {
       margin: const EdgeInsets.only(top: 10),
       width: sizeOf.width * .9,
       decoration: BoxDecoration(
+        color: ScheduleServiceTheme.blueColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.white),
       ),
       child: Card(
+        color: Colors.white,
         child: ListTile(
           leading: CircleAvatar(
             radius: 34,
@@ -40,7 +42,8 @@ class ListServicesPetshops extends StatelessWidget {
           title: Text(
             namePetshop,
             style: const TextStyle(
-              fontSize: 22,
+              overflow: TextOverflow.ellipsis,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
               color: ScheduleServiceTheme.orangeColor,
             ),

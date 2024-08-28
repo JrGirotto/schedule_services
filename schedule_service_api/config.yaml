@@ -18,3 +18,5 @@ auth:
         method: post
     - /adm_users:
         method: post
+    - /petshops:
+        method: post

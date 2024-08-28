@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
               child: Text(
                 'Olá Meg  🐶 ❤',
                 style: TextStyle(
-                  fontSize: 26,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: ScheduleServiceTheme.blueColor,
                 ),
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                       child: Text(
                         'Escolha o Serviço Pet:',
                         style: TextStyle(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: ScheduleServiceTheme.orangeColor),
                       ),

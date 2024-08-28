@@ -43,7 +43,7 @@ class ListServicesPetshops extends StatelessWidget {
             namePetshop,
             style: const TextStyle(
               overflow: TextOverflow.ellipsis,
-              fontSize: 18,
+              fontSize: 14,
               fontWeight: FontWeight.bold,
               color: ScheduleServiceTheme.orangeColor,
             ),
@@ -51,25 +51,25 @@ class ListServicesPetshops extends StatelessWidget {
           subtitle: Text(
             priceService,
             style: const TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: ScheduleServiceTheme.blueColor),
           ),
           trailing: Padding(
-            padding: const EdgeInsets.fromLTRB(4, 4, 0, 4),
+            padding: const EdgeInsets.fromLTRB(4, 4, 0, 0),
             child: Column(
               children: [
                 Text(
                   scheduleDay,
                   style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: ScheduleServiceTheme.blueColor),
                 ),
                 Text(
                   scheduleHour,
                   style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: ScheduleServiceTheme.orangeColor),
                 ),

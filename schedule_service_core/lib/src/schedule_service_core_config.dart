@@ -6,6 +6,8 @@ import 'package:flutter_getit/flutter_getit.dart';
 import 'package:schedule_service_core/src/loader/schedule_service_loader.dart';
 import 'package:schedule_service_core/src/theme/schedule_service_theme.dart';
 
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 class ScheduleServiceCoreConfig extends StatelessWidget {
   const ScheduleServiceCoreConfig({
     Key? key,
@@ -39,6 +41,15 @@ class ScheduleServiceCoreConfig extends StatelessWidget {
               didStart!();
             }
             return MaterialApp(
+              localizationsDelegates: const [
+                //AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+              ],
+              supportedLocales: const [
+                Locale('pt', ''), // Português
+              ],
               debugShowCheckedModeBanner: false,
               theme: ScheduleServiceTheme.lightTheme,
               darkTheme: ScheduleServiceTheme.darkTheme,

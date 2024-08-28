@@ -36,9 +36,34 @@ class _PetshopsPageState extends State<PetshopsPage> {
             ),
             onPressed: () {
               showDatePicker(
-                  context: context,
-                  firstDate: DateTime.now(),
-                  lastDate: DateTime(2025));
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime.now(),
+                lastDate: DateTime(2025),
+                helpText: 'Agende sua melhor data', // Can be used as title
+                //cancelText: 'Not now',
+                confirmText: 'Agendar',
+                builder: (context, child) {
+                  return Theme(
+                    data: ThemeData.dark().copyWith(
+                      colorScheme: const ColorScheme.dark(
+                        primary: Colors.grey,
+                        onPrimary: ScheduleServiceTheme.blueColor,
+                        surface: ScheduleServiceTheme.lightGrayColor,
+                        onSurface: ScheduleServiceTheme.orangeColor,
+                      ),
+                      dialogBackgroundColor: Colors.red[900],
+                      textButtonTheme: TextButtonThemeData(
+                        style: TextButton.styleFrom(
+                          foregroundColor: ScheduleServiceTheme.blueColor,
+                        ),
+                      ),
+                    ),
+                    child: child!,
+                  );
+                },
+              );
+
               //TODO: Filtra a listagem com opções + próximas a partir da data escolhida
               //Obs.: Analisar necessidade da filtragem por horário
               //Obs2.: Analisar Performance/Custo-Benefício a filtragem tb por: Petshop e Preço

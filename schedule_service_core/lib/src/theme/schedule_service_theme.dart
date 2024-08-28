@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 final class ScheduleServiceTheme {
-  static const orangeColor = Color(0xFFFFAE45);
+  static const orangeColor = Color.fromARGB(255, 255, 145, 0);
   static const lightOrangeColor = Color(0xFFFDF0E9);
   static const blueColor = Color.fromARGB(255, 48, 46, 214);
   static const lightGrayColor = Color(0xFFFFEFE9);
@@ -41,7 +41,7 @@ final class ScheduleServiceTheme {
           borderRadius: BorderRadius.circular(16),
         ),
         textStyle: const TextStyle(
-          fontFamily: 'Monserrat',
+          fontFamily: 'Montserrat',
           fontSize: 14,
           fontWeight: FontWeight.w700,
         ),

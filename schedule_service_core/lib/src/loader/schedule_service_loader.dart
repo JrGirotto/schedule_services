@@ -12,7 +12,7 @@ class ScheduleServiceLoader extends AsyncOverlay {
                 child: SizedBox(
                   width: MediaQuery.sizeOf(context).width * .8,
                   child: LoadingAnimationWidget.inkDrop(
-                      color: Colors.orange, size: 50),
+                      color: Colors.deepOrange, size: 50),
                 ),
               );
             });

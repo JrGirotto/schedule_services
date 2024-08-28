@@ -20,7 +20,7 @@ class ListServicesSchedulled extends StatelessWidget {
 
     return Container(
       margin: const EdgeInsets.only(top: 10),
-      width: sizeOf.width * .8,
+      width: sizeOf.width * .9,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.white),
@@ -35,7 +35,7 @@ class ListServicesSchedulled extends StatelessWidget {
           title: Text(
             namePet,
             style: const TextStyle(
-              fontSize: 22,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               color: ScheduleServiceTheme.orangeColor,
             ),
@@ -43,14 +43,14 @@ class ListServicesSchedulled extends StatelessWidget {
           subtitle: Text(
             typeService,
             style: const TextStyle(
-                fontSize: 18,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: ScheduleServiceTheme.blueColor),
           ),
           trailing: Text(
             scheduledService,
             style: const TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: ScheduleServiceTheme.blueColor),
           ),

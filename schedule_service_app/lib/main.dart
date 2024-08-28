@@ -3,10 +3,11 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
+import 'package:schedule_service_core/schedule_service_core.dart';
+
 import 'package:schedule_service_app/src/modules/checkout/checkout_module.dart';
 import 'package:schedule_service_app/src/modules/petshops/petshops_module.dart';
 import 'package:schedule_service_app/src/pages/splash_page/splash_page.dart';
-import 'package:schedule_service_core/schedule_service_core.dart';
 
 import 'src/binding/schedule_service_application_binding.dart';
 import 'src/modules/auth/auth_module.dart';
@@ -30,7 +31,7 @@ class ScheduleServiceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScheduleServiceCoreConfig(
-      title: 'Serviço de Agendamento - User',
+      title: 'BanhoPet - User',
       binding: ScheduleServiceApplicationBinding(),
       pagesBuilders: [
         FlutterGetItPageBuilder(

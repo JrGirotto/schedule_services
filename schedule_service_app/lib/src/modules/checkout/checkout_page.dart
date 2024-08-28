@@ -12,34 +12,39 @@ class CheckoutPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: ScheduleServiceTheme.blueColor,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 50),
-              child: Text(
-                'Quase Tudo Pronto!',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: ScheduleServiceTheme.orangeColor,
-                ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(top: 50),
+            child: Text(
+              'Agendado com Sucesso!',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: ScheduleServiceTheme.orangeColor,
               ),
             ),
-            const SizedBox(height: 20),
-            Container(
+          ),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
               padding: const EdgeInsets.only(top: 10),
               color: Colors.transparent,
               child: Container(
+                padding: const EdgeInsets.all(8),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(40.0),
                     topRight: Radius.circular(40.0),
+                    bottomLeft: Radius.circular(40.0),
+                    bottomRight: Radius.circular(40.0),
                   ),
                   border: Border.all(
-                    color: ScheduleServiceTheme.blueColor,
+                    color: ScheduleServiceTheme.orangeColor,
                   ),
                 ),
                 child: Column(
@@ -49,16 +54,16 @@ class CheckoutPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Serviço Escolhido: ',
+                          'Serviços ',
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: ScheduleServiceTheme.orangeColor),
                         ),
                         Text(
-                          'Banho',
+                          'Agendados',
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: ScheduleServiceTheme.blueColor),
                         ),
@@ -103,9 +108,10 @@ class CheckoutPage extends StatelessWidget {
                     const Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'Adicionar mais Serviços:',
+                        'Distância e Estimativa:\n 4 km - 5 min.',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: ScheduleServiceTheme.blueColor,
                         ),
@@ -115,33 +121,31 @@ class CheckoutPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            Row(
-              children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: SizedBox(
+                    height: 58,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           foregroundColor: ScheduleServiceTheme.blueColor,
                           backgroundColor: ScheduleServiceTheme.orangeColor),
                       onPressed: () {
-                        Navigator.of(context).pop();
+                        //TODO: Agendar tarefas no app Agenda padrão do usuário
+                        Navigator.of(context).pushNamed('/home');
                       },
-                      child: const Text(
-                        'Finalizar Pagamento',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      child: const Text('Adicionar Lembrete na Agenda?'),
                     ),
                   ),
                 ),
-              ],
-            )
-          ],
-        ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

@@ -13,6 +13,7 @@ class _ConfirmServicesState extends State<ConfirmServices> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: Colors.transparent,
       child: Center(
         child: Container(
           padding: const EdgeInsets.all(30),
@@ -38,7 +39,7 @@ class _ConfirmServicesState extends State<ConfirmServices> {
                   const Text(
                     'Confirma Agendamento?',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: ScheduleServiceTheme.blueColor,
                     ),
@@ -56,6 +57,15 @@ class _ConfirmServicesState extends State<ConfirmServices> {
                   Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
+                      Expanded(
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pushReplacementNamed('/cart');
+                          },
+                          child: const Text('Confirmar'),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
                       ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
@@ -65,15 +75,6 @@ class _ConfirmServicesState extends State<ConfirmServices> {
                           Navigator.of(context).pop();
                         },
                         child: const Text('Voltar'),
-                      ),
-                      const SizedBox(width: 16),
-                      Expanded(
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.of(context).pushReplacementNamed('/cart');
-                          },
-                          child: const Text('Confirmar'),
-                        ),
                       ),
                     ],
                   ),

@@ -20,7 +20,7 @@ class ScheduleServiceAppBar extends AppBar {
                 child: Text(
                   'Banho',
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: ScheduleServiceTheme.blueColor,
                   ),

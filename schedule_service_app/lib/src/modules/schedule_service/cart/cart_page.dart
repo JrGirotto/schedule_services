@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
 import 'package:schedule_service_app/src/modules/schedule_service/cart/widgets/add_services.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/schedule_service_controller.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
 import '../petshops/widgets/list_services_petshops.dart';
@@ -220,8 +222,8 @@ class CartPage extends StatelessWidget {
                             foregroundColor: ScheduleServiceTheme.blueColor,
                             backgroundColor: ScheduleServiceTheme.orangeColor),
                         onPressed: () {
-                          Navigator.of(context)
-                              .pushReplacementNamed('/checkout');
+                          Injector.get<ScheduleServiceController>().goToDone();
+                              
                         },
                         child: const Text(
                           'Finalizar Pagamento',

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/schedule_service_controller.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
 import '../petshops/widgets/list_services_petshops.dart';
@@ -136,7 +138,8 @@ class CheckoutPage extends StatelessWidget {
                           backgroundColor: ScheduleServiceTheme.orangeColor),
                       onPressed: () {
                         //TODO: Agendar tarefas no app Agenda padrão do usuário e volta para página de serviços services-pet
-                        Navigator.of(context).pushNamed('/services-pet');
+                        Injector.get<ScheduleServiceController>().goToPetServices();
+                              
                       },
                       child: const Text('Adicionar Lembrete na Agenda?'),
                     ),

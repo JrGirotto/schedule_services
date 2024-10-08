@@ -52,8 +52,7 @@ class ScheduleServiceController with MessageStateMixin {
     _model = _model.clear();
   }
 
-
-  void debug(){
+  void debug() {
     print(_model.nameTutor);
     print(_model.emailTutor);
     print(_model.namePet);
@@ -69,15 +68,22 @@ class ScheduleServiceController with MessageStateMixin {
     _step.forceUpdate(FormSteps.servicesPet);
   }
 
-    void goToPetshops() {
+  void goToPetshops() {
     _step.forceUpdate(FormSteps.petshops);
   }
 
   //void goToForgotPassword() {
-    //_step.forceUpdate(FormSteps.userPet);
+  //_step.forceUpdate(FormSteps.userPet);
   //}
 
   void goToUserPet() {
     _step.forceUpdate(FormSteps.userPet);
   }
+
+  void goToCart() {
+    _step.forceUpdate(FormSteps.cart);
+  }
+
+  void goToDone() {
+    _step.forceUpdate(FormSteps.checkout);}
 }

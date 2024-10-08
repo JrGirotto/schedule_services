@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getit/flutter_getit.dart';
 import 'package:schedule_service_app/src/modules/schedule_service/petshops/widgets/list_services_petshops.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/schedule_service_controller.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
 class ConfirmServicesPage extends StatefulWidget {
@@ -12,6 +14,9 @@ class ConfirmServicesPage extends StatefulWidget {
 class _ConfirmServicesState extends State<ConfirmServicesPage> {
   @override
   Widget build(BuildContext context) {
+    final controller = Injector.get<ScheduleServiceController>();
+
+
     return Material(
       color: Colors.transparent,
       child: Center(
@@ -60,7 +65,7 @@ class _ConfirmServicesState extends State<ConfirmServicesPage> {
                       Expanded(
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.of(context).pushReplacementNamed('/cart');
+                            controller.goToCart();
                           },
                           child: const Text('Confirmar'),
                         ),

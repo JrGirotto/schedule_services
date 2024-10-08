@@ -9,11 +9,6 @@
 .history
 .svn/
 migrate_working_dir/
-*.mp4
-*.pdf
-*.txt
-*.doc
-*.docx
 
 # IntelliJ related
 *.iml

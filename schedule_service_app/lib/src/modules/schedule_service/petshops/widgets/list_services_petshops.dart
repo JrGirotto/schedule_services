@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schedule_service_app/src/modules/petshops/widgets/confirm_services.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/petshops/confirm_services/confirm_services_page.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
 class ListServicesPetshops extends StatelessWidget {
@@ -80,7 +80,7 @@ class ListServicesPetshops extends StatelessWidget {
             showDialog(
               context: context,
               builder: (BuildContext context) {
-                return const ConfirmServices();
+                return const ConfirmServicesPage();
               },
             );
           },

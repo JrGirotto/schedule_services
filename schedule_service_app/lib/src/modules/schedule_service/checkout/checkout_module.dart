@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
-import 'package:schedule_service_app/src/modules/checkout/checkout_page.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/checkout/checkout_page.dart';
 
 class CheckoutModule extends FlutterGetItModule {
   @override

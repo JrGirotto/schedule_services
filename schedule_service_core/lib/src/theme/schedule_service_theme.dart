@@ -26,12 +26,12 @@ final class ScheduleServiceTheme {
       ),
       floatingLabelStyle:
           const TextStyle(color: blueColor, fontWeight: FontWeight.w600),
+      border: _defaultInputBorder,
       enabledBorder: _defaultInputBorder,
       focusedBorder: _defaultInputBorder,
       errorBorder: _defaultInputBorder.copyWith(
         borderSide: const BorderSide(color: Colors.red),
       ),
-      border: _defaultInputBorder,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

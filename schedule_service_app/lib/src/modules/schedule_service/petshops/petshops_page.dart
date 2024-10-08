@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:schedule_service_app/src/modules/petshops/widgets/list_services_petshops.dart';
+import 'package:flutter_getit/flutter_getit.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/petshops/widgets/list_services_petshops.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/schedule_service_controller.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
 class PetshopsPage extends StatefulWidget {
@@ -10,13 +12,13 @@ class PetshopsPage extends StatefulWidget {
 }
 
 class _PetshopsPageState extends State<PetshopsPage> {
-  final formKey = GlobalKey<FormState>();
-  final nameEC = TextEditingController();
-  final namePetEC = TextEditingController();
-  final emailPetEC = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+
+    Injector.get<ScheduleServiceController>().debug();
+
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -40,8 +42,8 @@ class _PetshopsPageState extends State<PetshopsPage> {
                 initialDate: DateTime.now(),
                 firstDate: DateTime.now(),
                 lastDate: DateTime(2025),
-                helpText: 'Agende sua melhor data', // Can be used as title
-                //cancelText: 'Not now',
+                helpText: 'Escolha a melhor data', 
+                cancelText: 'Voltar',
                 confirmText: 'Agendar',
                 builder: (context, child) {
                   return Theme(

@@ -42,7 +42,6 @@ class ScheduleServiceCoreConfig extends StatelessWidget {
             }
             return MaterialApp(
               localizationsDelegates: const [
-                //AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,

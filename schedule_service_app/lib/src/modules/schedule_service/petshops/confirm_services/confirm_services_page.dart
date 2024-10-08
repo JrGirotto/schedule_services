@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:schedule_service_app/src/modules/petshops/widgets/list_services_petshops.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/petshops/widgets/list_services_petshops.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
-class ConfirmServices extends StatefulWidget {
-  const ConfirmServices({super.key});
+class ConfirmServicesPage extends StatefulWidget {
+  const ConfirmServicesPage({super.key});
 
   @override
-  State<ConfirmServices> createState() => _ConfirmServicesState();
+  State<ConfirmServicesPage> createState() => _ConfirmServicesState();
 }
 
-class _ConfirmServicesState extends State<ConfirmServices> {
+class _ConfirmServicesState extends State<ConfirmServicesPage> {
   @override
   Widget build(BuildContext context) {
     return Material(

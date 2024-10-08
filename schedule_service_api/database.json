@@ -4,15 +4,17 @@
             "id": "2ba61d20-54e7-11ef-9332-f3864a4c3026",
             "email": "user@gmail.com",
             "password": "123123",
-            "telefone": "14 997040256",
+            "phoneTutor": "14 997040256",
             "pets": [
                 {
                     "id": 1,
-                    "nome": "Rex",
-                    "tipo": "Cachorro",
-                    "raca": "Labrador",
-                    "data_nasc": "2000-06-02",
-                    "porte": "Médio"
+                    "namePet": "Meg",
+                    "typePet": "Cachorro",
+                    "breedPet": "Labrador",
+                    "datePet": "2014-06-02",
+                    "sizePet": "Médio-até 20 Kg",
+                    "gender": "Fêmea",
+                    "color": "Caramelo"
                 }
             ]
         }
@@ -27,51 +29,51 @@
     "petshops": [
         {
             "id": "83c5e410-54db-11ef-9332-f3864a4c3026",
-            "email": "petshop@gmail.com",
+            "emailPetshop": "petshop@gmail.com",
             "password": "123123",
-            "nome": "PetShop A",
-            "endereco": "Rua X, 123",
-            "telefone": "1234-5678",
-            "servicos": [
+            "namePetshop": "PetShop A",
+            "address": "Rua X, 123",
+            "phonePetshop": "1234-5678",
+            "servicesPet": [
                 {
                     "uuid": "5e1c11d6-e45c-4058-b199-9ce7ec5af607",
-                    "nome": "Banho",
-                    "preco": 50.0
+                    "nameService": "Banho",
+                    "price": 50.0
                 },
                 {
                     "uuid": "c7e1880f-8c58-414e-b499-0c204139e3d8",
-                    "nome": "Tosa",
-                    "preco": 70.0
+                    "nameService": "Tosa",
+                    "prico": 70.0
                 }
             ]
         }
     ],
-    "agendamentos": [
+    "schedulles": [
         {
             "id": 1,
-            "usuario_id": 1,
+            "tutor_id": 1,
             "pet_id": 1,
             "petshop_id": 1,
-            "servico_id": 1,
-            "data_agendamento": "2024-08-01T10:00:00",
+            "service_id": 1,
+            "date_schedulle": "2024-08-01T10:00:00",
             "status": "Pendente"
         }
     ],
-    "pagamentos": [
+    "payments": [
         {
             "id": 1,
-            "agendamento_id": 1,
-            "valor": 50.0,
-            "metodo_pagamento": "Cartão de Crédito",
+            "schedulle_id": 1,
+            "total": 50.0,
+            "method_payment": "Cartão de Crédito",
             "status": "Aprovado"
         }
     ],
-    "lembretes": [
+    "reminders": [
         {
             "id": 1,
-            "agendamento_id": 1,
-            "data_lembrete": "2024-08-01T08:00:00",
-            "mensagem": "Lembrete: Você tem um agendamento para banho do Rex às 10:00."
+            "schedulle_id": 1,
+            "date_reminder": "2024-08-01T08:00:00",
+            "message_reminder": "Lembrete: Você tem um agendamento para banho do Rex às 10:00."
         }
     ]
 }

@@ -108,7 +108,7 @@ class CheckoutPage extends StatelessWidget {
                     const Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'Distância e Estimativa:\n 4 km - 5 min.',
+                        'Estimativa:\n Distância 4 km - 5 min.',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 16,
@@ -135,8 +135,8 @@ class CheckoutPage extends StatelessWidget {
                           foregroundColor: ScheduleServiceTheme.blueColor,
                           backgroundColor: ScheduleServiceTheme.orangeColor),
                       onPressed: () {
-                        //TODO: Agendar tarefas no app Agenda padrão do usuário
-                        Navigator.of(context).pushNamed('/home');
+                        //TODO: Agendar tarefas no app Agenda padrão do usuário e volta para página de serviços services-pet
+                        Navigator.of(context).pushNamed('/services-pet');
                       },
                       child: const Text('Adicionar Lembrete na Agenda?'),
                     ),

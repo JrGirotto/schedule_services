@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:schedule_service_app/src/modules/home/widgets/buttom_home.dart';
-import 'package:schedule_service_app/src/modules/home/widgets/list_services_schedulled.dart';
+import 'package:flutter_getit/flutter_getit.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/schedule_service_controller.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/services_pet/widgets/buttom_home.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ServicesPetPage extends StatelessWidget {
+  const ServicesPetPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,8 @@ class HomePage extends StatelessWidget {
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(40.0),
                     topRight: Radius.circular(40.0),
+                    bottomLeft: Radius.circular(40.0),
+                    bottomRight: Radius.circular(40.0),
                   ),
                   border: Border.all(
                     color: ScheduleServiceTheme.blueColor,
@@ -76,7 +79,7 @@ class HomePage extends StatelessWidget {
                           children: [
                             GestureDetector(
                               onTap: () =>
-                                  Navigator.of(context).pushNamed('/petshops'),
+                                  Injector.get<ScheduleServiceController>().goToPetshops(),
                               child: const ButtomHome(
                                 buttonService: 'B A N H O',
                                 titleColor: ScheduleServiceTheme.blueColor,
@@ -116,9 +119,9 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 30),
                     // TODO: Só aparece se tiver agendamento(s). *** Criar um página só pra isso? ***
-                    const Align(
+                    const SizedBox(height: 30),
+                    /*const Align(
                       alignment: Alignment.center,
                       child: Text(
                         'Seus Serviços Agendados:',
@@ -128,18 +131,18 @@ class HomePage extends StatelessWidget {
                           color: ScheduleServiceTheme.blueColor,
                         ),
                       ),
-                    ),
+                    ), */
                   ],
                 ),
               ),
             ),
-            const ListServicesSchedulled(
+            /* const ListServicesSchedulled(
               avatarPet:
                   'https://www.petz.com.br/blog/wp-content/uploads/2023/02/perfil-de-cachorro.jpg',
               namePet: 'Meg',
               typeService: 'Banho',
               scheduledService: '15/04 - 15:00',
-            ),
+            ), */
           ],
         ),
       ),

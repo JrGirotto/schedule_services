@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
     messageListener(controller);
     effect(() {
       if (controller.logged) {
-        Navigator.of(context).pushReplacementNamed('/home');
+        Navigator.of(context).pushReplacementNamed('/schedule-service');
       }
     });
     super.initState();
@@ -55,13 +55,13 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 100),
+              const SizedBox(height: 80),
               Image.asset('assets/images/logo_banhopet.png',
                   height: MediaQuery.of(context).size.height * 0.2),
-              const SizedBox(height: 40),
+              const SizedBox(height: 30),
               Center(
                 child: Container(
-                  padding: const EdgeInsets.all(40),
+                  padding: const EdgeInsets.all(28),
                   constraints: BoxConstraints(maxWidth: sizeOf.width * .8),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -108,25 +108,47 @@ class _LoginPageState extends State<LoginPage> with MessageViewMixin {
                             );
                           },
                         ),
-                        const SizedBox(height: 32),
+                        const SizedBox(height: 24),
                         SizedBox(
                           width: sizeOf.width * .8,
-                          height: 48,
+                          height: 58,
                           child: ElevatedButton(
                             onPressed: () {
                               FocusManager.instance.primaryFocus?.unfocus();
                               final valid =
                                   formKey.currentState?.validate() ?? false;
                               if (valid) {
-                                controller.login(emailEC.text, passwordlEC.text);
+                                controller.login(
+                                    emailEC.text, passwordlEC.text);
                               }
-                              Navigator.of(context).pushNamed('/home');
                             },
                             child: const Text('ENTRAR'),
                           ),
                         ),
                       ],
                     ),
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/schedule-service/user-pet');
+                },
+                child: const Text(
+                  'Cadastre-se',
+                  style: TextStyle(
+                    color: ScheduleServiceTheme.blueColor,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Esqueci minha senha',
+                  style: TextStyle(
+                    color: ScheduleServiceTheme.orangeColor,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

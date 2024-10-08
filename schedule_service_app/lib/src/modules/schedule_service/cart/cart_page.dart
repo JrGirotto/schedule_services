@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:schedule_service_app/src/modules/cart/widgets/add_services.dart';
+import 'package:schedule_service_app/src/modules/schedule_service/cart/widgets/add_services.dart';
 import 'package:schedule_service_core/schedule_service_core.dart';
 
 import '../petshops/widgets/list_services_petshops.dart';

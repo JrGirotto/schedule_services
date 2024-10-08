@@ -86,4 +86,5 @@ class ScheduleServiceController with MessageStateMixin {
 
   void goToDone() {
     _step.forceUpdate(FormSteps.checkout);}
+
 }

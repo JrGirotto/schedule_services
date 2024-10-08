@@ -14,20 +14,32 @@ class ServicesPetPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: ScheduleServiceTheme.orangeColor,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        title: const Text(
+          'Olá Meg  🐶 ❤',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: ScheduleServiceTheme.blueColor,
+          ),
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.edit_note,
+              color: ScheduleServiceTheme.blueColor,
+            ),
+            onPressed: () {
+              Injector.get<ScheduleServiceController>().goToUserPet();
+            },
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 50),
-              child: Text(
-                'Olá Meg  🐶 ❤',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: ScheduleServiceTheme.blueColor,
-                ),
-              ),
-            ),
+          children: [            
             const SizedBox(height: 20),
             Container(
               padding: const EdgeInsets.only(top: 10),

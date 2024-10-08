@@ -70,6 +70,17 @@ class _UserPetPageState extends State<UserPetPage> {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             centerTitle: true,
+            actions: [
+              IconButton(
+                icon: const Icon(
+                  Icons.edit_note,
+                  color: ScheduleServiceTheme.blueColor,
+                ),
+                onPressed: () {
+                  //scheduleServiceController.EditUserPet();
+                },
+              ),
+            ],
             title: const Text(
               'Cadastros',
               style: TextStyle(

@@ -1,20 +1,16 @@
-Funcionalidades presentes no JSON fornecido:
+Painel Web: Administrador:
 
-Administrador:
+	- Pedidos Totais por Lojas:
+		- Registros de pedidos totais feitos por cada loja, incluindo o número de pedidos e o valor total.
+	
+	- Recebimentos:
+		- Detalhes dos recebimentos para cada empresa durante um determinado período, incluindo o valor total recebido pela empresa e a parte destinada ao administrador.
+		Filtros:
+			- Opções de filtro por: data, valor, empresas e serviços para facilitar a análise e busca de informações pelo administrador.
 
-Pedidos Totais por Lojas:
+	- Categorias de Serviços:
+		- Cada categoria de serviço possui um identificador único e um nome.
 
-Registros de pedidos totais feitos por cada loja, incluindo o número de pedidos e o valor total.
-Recebimentos:
-
-Detalhes dos recebimentos para cada empresa durante um determinado período, incluindo o valor total recebido pela empresa e a parte destinada ao administrador.
-Filtros:
-
-Opções de filtro por data, valor, empresas e serviços para facilitar a análise e busca de informações pelo administrador.
-
-Categorias de Serviços:
-
-Cada categoria de serviço possui um identificador único e um nome.
 Empresas:
 
 As empresas cadastradas no sistema têm informações detalhadas, como nome, descrição, informações de contato (telefone, email, endereço, website e redes sociais), serviços oferecidos (com descrição, preço, duração e disponibilidade), avaliações dos usuários, promoções ativas e notificações.

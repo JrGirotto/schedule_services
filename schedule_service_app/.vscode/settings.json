@@ -23,5 +23,6 @@
 	"debug.toolBarLocation": "commandCenter",
 	"editor.fontFamily": "Fira Code",
 	"editor.fontSize": 12,
-	"editor.fontLigatures": true
+	"editor.fontLigatures": true,
+	"java.configuration.updateBuildConfiguration": "interactive"
 }

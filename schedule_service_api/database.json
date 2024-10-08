@@ -1,251 +1,79 @@
 {
     "users": [
         {
-            "id": "21fe6800-6e71-1e8a-bd4b-4973ed9d0005",
+            "id": "2ba61d20-54e7-11ef-9332-f3864a4c3026",
             "email": "user@gmail.com",
-            "password": "123123"
+            "password": "123123",
+            "phoneTutor": "14 997040256",
+            "pets": [
+                {
+                    "id": 1,
+                    "namePet": "Meg",
+                    "typePet": "Cachorro",
+                    "breedPet": "Labrador",
+                    "datePet": "2014-06-02",
+                    "sizePet": "Médio-até 20 Kg",
+                    "gender": "Fêmea",
+                    "color": "Caramelo"
+                }
+            ]
         }
     ],
     "adm_users": [
         {
-            "id": "f11ad6f0-6f89-1e8a-bd4b-4973ed9d0005",
+            "id": "27424dd0-54e7-11ef-9332-f3864a4c3026",
             "email": "adm@gmail.com",
             "password": "123123"
         }
     ],
-	"tutors": [
-		{
-			"id": "u1",
-			"name": "João Silva",
-			"email": "joao.silva@example.com",
-			"phone": "+5511999999999",
-			"address": {
-			"street": "Rua A",
-			"number": "123",
-			"city": "São Paulo",
-			"state": "SP",
-			"zip": "01000-000"
-		},
-		"pets": [
-			{
-				"id": "pet1",
-				"name": "Rex",
-				"type": "Dog",
-				"breed": "Labrador",
-				"birth": "04/04/2001",
-				"weight": 30.0
-			},
+    "petshops": [
         {
-          "id": "pet2",
-          "name": "Mimi",
-          "type": "Cat",
-          "breed": "Persian",
-          "birth": "03/03/2005",
-          "weight": 5.0
+            "id": "83c5e410-54db-11ef-9332-f3864a4c3026",
+            "emailPetshop": "petshop@gmail.com",
+            "password": "123123",
+            "namePetshop": "PetShop A",
+            "address": "Rua X, 123",
+            "phonePetshop": "1234-5678",
+            "servicesPet": [
+                {
+                    "uuid": "5e1c11d6-e45c-4058-b199-9ce7ec5af607",
+                    "nameService": "Banho",
+                    "price": 50.0
+                },
+                {
+                    "uuid": "c7e1880f-8c58-414e-b499-0c204139e3d8",
+                    "nameService": "Tosa",
+                    "prico": 70.0
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "u2",
-      "name": "Maria Oliveira",
-      "email": "maria.oliveira@example.com",
-      "phone": "+5511888888888",
-      "address": {
-        "street": "Avenida B",
-        "number": "456",
-        "city": "Rio de Janeiro",
-        "state": "RJ",
-        "zip": "02000-000"
-      },
-      "pets": [
-        {
-          "id": "pet3",
-          "name": "Bolt",
-          "type": "Dog",
-          "breed": "Beagle",
-          "birth": "02/02/2003",
-          "weight": 10.0
-        }
-      ]
-    }
-  ],
-  "services": [
-    {
-      "id": "s1",
-      "name": "Banho",
-      "description": "Banho completo para pets.",
-      "duration": 60
-    },
-    {
-      "id": "s2",
-      "name": "Tosa",
-      "description": "Tosa completa para pets.",
-      "duration": 90
-    },
-    {
-      "id": "s3",
-      "name": "Banho e Tosa",
-      "description": "Pacote completo de banho e tosa.",
-      "duration": 120
-    },
-    {
-      "id": "s4",
-      "name": "Consulta",
-      "description": "Consulta veterinária.",
-      "duration": 30
-    },
-    {
-      "id": "s5",
-      "name": "Vacinas",
-      "description": "Vacinação para pets.",
-      "duration": 15
-    }
-  ],
-  "providers": [
-    {
-      "id": "p1",
-      "name": "Pet Shop Alegre",
-	  "description": "Serviços de banho e tosa com carinho.",
-	  "cnpj": "12.234.567-0001/46",
-	  "email": "petshop@gmail.com",
-	  "phone": "(14)99870-0345",
-	  "owner": "Maria da Cruz Florêncio",
- 
-      "address": {
-        "street": "Rua das Flores",
-        "number": "789",
-        "city": "São Paulo",
-        "state": "SP",
-        "zip": "03000-000"
-      },
-      "services": [
-        {
-          "service_id": "s1",
-          "price": 55.0
-        },
-        {
-          "service_id": "s2",
-          "price": 75.0
-        },
-        {
-          "service_id": "s3",
-          "price": 110.0
-        },
-        {
-          "service_id": "s4",
-          "price": 145.0
-        },
-        {
-          "service_id": "s5",
-          "price": 85.0
-        }
-      ]
-    },
-    {
-      "id": "p2",
-      "name": "Clínica Vet Vida",
-      "description": "Cuidados veterinários e serviços de pet shop.",
-	  "cnpj": "12.234.567-0001/46",
-	  "email": "petshop@gmail.com",
-	  "phone": "(14)99870-0345",
-	  "owner": "Maria da Cruz Florêncio",
-      "address": {
-        "street": "Avenida Central",
-        "number": "101",
-        "city": "São Paulo",
-        "state": "SP",
-        "zip": "04000-000"
-      },
-      "services": [
-        {
-          "service_id": "s1",
-          "price": 50.0
-        },
-        {
-          "service_id": "s2",
-          "price": 70.0
-        },
-        {
-          "service_id": "s3",
-          "price": 100.0
-        },
-        {
-          "service_id": "s4",
-          "price": 150.0
-        },
-        {
-          "service_id": "s5",
-          "price": 80.0
-        }
-      ]
-    }
-  ],
-  "orders": [
-    {
-      "id": "o1",
-      "user_id": "u1",
-      "items": [
-        {
-          "service_id": "s1",
-          "price": 55.0,
-          "quantity": 1,
-          "pet_id": "pet1"
-        },
-        {
-          "service_id": "s5",
-          "price": 85.0,
-          "quantity": 2,
-          "pet_id": "pet2"
-        }
-      ],
-      "total": 225.0,
-      "status": "confirmed",
-      "provider_id": "p1",
-      "scheduled_time": "2024-05-20T10:00:00Z",
-      "payment": {
-        "method": "credit_card",
-        "status": "paid"
-      }
-    },
-    {
-      "id": "o2",
-      "user_id": "u2",
-      "items": [
-        {
-          "service_id": "s3",
-          "price": 100.0,
-          "quantity": 1,
-          "pet_id": "pet3"
-        }
-      ],
-      "total": 100.0,
-      "status": "pending",
-      "provider_id": "p2",
-      "scheduled_time": "2024-05-21T14:00:00Z",
-      "payment": {
-        "method": "credit_card",
-        "status": "pending"
-      }
-    }
-  ],
-  "cart": {
-    "user_id": "u1",
-    "items": [
-      {
-        "service_id": "s2",
-        "provider_id": "p2",
-        "price": 70.0,
-        "quantity": 1,
-        "pet_id": "pet1"
-      },
-      {
-        "service_id": "s4",
-        "provider_id": "p1",
-        "price": 145.0,
-        "quantity": 1,
-        "pet_id": "pet2"
-      }
     ],
-    "total": 215.0
-  }
+    "schedulles": [
+        {
+            "id": 1,
+            "tutor_id": 1,
+            "pet_id": 1,
+            "petshop_id": 1,
+            "service_id": 1,
+            "date_schedulle": "2024-08-01T10:00:00",
+            "status": "Pendente"
+        }
+    ],
+    "payments": [
+        {
+            "id": 1,
+            "schedulle_id": 1,
+            "total": 50.0,
+            "method_payment": "Cartão de Crédito",
+            "status": "Aprovado"
+        }
+    ],
+    "reminders": [
+        {
+            "id": 1,
+            "schedulle_id": 1,
+            "date_reminder": "2024-08-01T08:00:00",
+            "message_reminder": "Lembrete: Você tem um agendamento para banho do Rex às 10:00."
+        }
+    ]
 }
